@@ -145,6 +145,13 @@ ul {
   bottom: 200px;
   left: 0;
 }
+
+@media (max-width: 1200px) {
+  .dots {
+    display: none;
+  }
+}
+
 /* End Components */
 
 /* Start Header */
