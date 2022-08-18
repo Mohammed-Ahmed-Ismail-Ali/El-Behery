@@ -1,3 +1,4 @@
+//! Count Down Timer
 let countDownDate = new Date("Dec 31, 2022 23:59:59").getTime();
 
 let counter = setInterval(() => {
@@ -28,20 +29,19 @@ let counter = setInterval(() => {
 
 }, 1000)
 
-// Increase Numbers On Scrolling
-
+//! Increase Numbers On Scrolling
 let nums = document.querySelectorAll(".box .number");
 let statsSection = document.querySelector(".statistics");
 let started = false;
 
-window.onscroll = function() {
+window.addEventListener("scroll",() => {
   if (window.scrollY >= statsSection.offsetTop - 700) {
     if (!started) { // started == false ?
       nums.forEach(num => startCount(num));
     }
     started = true;
   }
-};
+});
 
 function startCount(el) {
   let goal = el.dataset.goal;
@@ -52,3 +52,15 @@ function startCount(el) {
     }
   }, 2000 / goal)
 }
+
+//! Animate Width On Scrolling
+let skillsSection = document.querySelector('.our-skills');
+let spans = document.querySelectorAll('.the-progress span');
+
+window.addEventListener("scroll",() => {
+  if (window.scrollY >= skillsSection.offsetTop - 700) {
+    spans.forEach((span) => {
+      span.style.width = span.dataset.width;
+    })
+  }
+});
