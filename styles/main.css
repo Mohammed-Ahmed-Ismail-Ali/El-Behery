@@ -1486,7 +1486,7 @@ ul {
 .statistics {
   padding-top: var(--main-padding-top);
   padding-bottom: var(--main-padding-bottom);
-  background-image: url(/images/stats.jpg);
+  background-image: url(images/stats.jpg);
   background-size: cover;
   min-height: 300px;
   position: relative;
