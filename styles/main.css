@@ -1020,6 +1020,7 @@ ul {
   top: 0;
   height: 100%;
   background-color: var(--main-color);
+  transition: 1s;
 }
 
 /* End Our Skills */
@@ -1564,6 +1565,10 @@ ul {
 .statistics .container .box span:last-of-type {
   color: var(--main-color);
   font-size: 19px;
+}
+
+.statistics .container .box .number.money::after {
+  content: "K";
 }
 
 /* End Statistics */
