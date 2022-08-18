@@ -28,14 +28,14 @@ let counter = setInterval(() => {
 
 }, 1000)
 
-// Countdoan Timer
+// Increase Numbers On Scrolling
 
 let nums = document.querySelectorAll(".box .number");
 let statsSection = document.querySelector(".statistics");
 let started = false;
 
 window.onscroll = function() {
-  if (window.scrollY >= statsSection.offsetTop) {
+  if (window.scrollY >= statsSection.offsetTop - 700) {
     if (!started) { // started == false ?
       nums.forEach(num => startCount(num));
     }
